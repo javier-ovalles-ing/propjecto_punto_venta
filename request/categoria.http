@@ -14,7 +14,7 @@ GET  http://localhost:3030/api/categoria
 
 ### Get categoria
 
-GET  http://localhost:3030/api/categoria/6
+GET  http://localhost:3030/api/categoria/2
 
 ### Delete categoria
 

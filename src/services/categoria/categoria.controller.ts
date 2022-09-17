@@ -8,6 +8,7 @@ import database from "../../../config/database";
 import {
     NotFound
 } from "http-errors";
+import { EntryType } from "perf_hooks";
 
 
 export default class CategoriaController {
@@ -16,13 +17,29 @@ export default class CategoriaController {
     async list(req: Request, res: Response, next: NextFunction): Promise < void > {
         try {
 
+            const {Nombre} = req.query;
+            
+            /* Cambios echos para el Query */
+
             console.log("Que imprima request",req.query);
+            console.log("Que imprima query Nombre: ",Nombre);
+            console.log("Que imprima query type of Nombre: ",typeof Nombre);
 
             const repository = await database.getRepository(CategoryEntity);
-        
-            const Entitys = await repository.find()
+
+            
+            const Entitys = Nombre ?  await repository.find({
+                where:{
+                    Nombre :  Nombre as any,
+                    
+                },
+            }) : await repository.find() ;
+            
+            console.log("Entity:",Entitys)
             
             res.status(200).json(Entitys);
+            
+
 
         } catch (error) {
 
