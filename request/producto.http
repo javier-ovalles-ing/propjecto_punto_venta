@@ -1,0 +1,32 @@
+### Create producto
+
+POST  http://localhost:3030/api/producto
+Content-Type: application/json
+
+{     
+    "nombre" :"leche rida",
+    "descripcion" : "bebida",
+    "imagen": "https://www.adslzone.net/app/uploads-adslzone.net/2019/04/borrar-fondo-imagen.jpg"
+}
+### List producto
+
+GET  http://localhost:3030/api/producto
+
+### Get producto
+
+GET  http://localhost:3030/api/producto/3
+
+### Delete producto
+
+DELETE   http://localhost:3030/api/producto/4
+
+### Update producto
+
+PUT   http://localhost:3030/api/producto/4
+Content-Type: application/json
+
+{
+     
+
+}
+

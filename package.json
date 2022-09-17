@@ -1,0 +1,26 @@
+{
+  "name": "propjecto_punto_venta",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon",
+    "mig_category_rum": "npx typeorm-ts-node-esm migration:run -d ./config/database.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/http-errors": "^1.8.2",
+    "@types/node": "^18.7.16",
+    "nodemon": "^2.0.19"
+  },
+  "dependencies": {
+    "@types/express": "^4.17.13",
+    "http-errors": "^2.0.0",
+    "mysql": "^2.18.1",
+    "reflect-metadata": "^0.1.13",
+    "ts-node": "^10.9.1",
+    "typeorm": "^0.3.9"
+  }
+}

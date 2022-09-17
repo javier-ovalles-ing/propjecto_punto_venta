@@ -1,0 +1,41 @@
+### Create usuario
+
+POST  http://localhost:3030/api/usuario
+Content-Type: application/json
+
+{     
+    "nombre":"javier",
+    "apellido":"ovalles",
+    "documento_identidad":"402-2235066-8",
+    "telefono":"809-531-8812",
+    "correo":"javier@gmail.com",
+    "direccion":"c/10 #52 buenos aires herrera",
+    "foto": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1aGCJJPLdmre-sCCenhtV_Ic8JYPpYq4nEw&usqp=CAU"
+}
+### List usuario
+
+GET  http://localhost:3030/api/usuario
+
+### Get usuario
+
+GET  http://localhost:3030/api/usuario/2
+
+### Delete usuario
+
+DELETE   http://localhost:3030/api/usuario/2
+
+### Update usuario
+
+PUT   http://localhost:3030/api/usuario/2
+Content-Type: application/json
+
+{     
+    "nombre":"luis",
+    "apellido":"ovalles",
+    "documento_identidad":"403-2235066-8",
+    "telefono":"809-889-3117",
+    "correo":"luis@gmail.com",
+    "direccion":"c/11 #53 buenos aires herrera",
+    "foto": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1aGCJJPLdmre-sCCenhtV_Ic8JYPpYq4nEw&usqp=CAU"
+}
+

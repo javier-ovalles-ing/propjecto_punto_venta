@@ -1,0 +1,33 @@
+### Create categoria
+
+POST  http://localhost:3030/api/categoria
+Content-Type: application/json
+
+{
+    "Nombre" : "textil",
+    "detalles" : "tiene que ver con la ropa"
+}
+
+### List categoria
+
+GET  http://localhost:3030/api/categoria
+
+### Get categoria
+
+GET  http://localhost:3030/api/categoria/6
+
+### Delete categoria
+
+DELETE   http://localhost:3030/api/categoria/6
+
+### Update categoria
+
+PUT   http://localhost:3030/api/categoria/4
+Content-Type: application/json
+
+{
+     
+    "Nombre" : "textil",
+    "detalles" : "tiene que ver con la tela"
+}
+

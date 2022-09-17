@@ -1,0 +1,32 @@
+### Create orden
+
+POST  http://localhost:3030/api/orden
+Content-Type: application/json
+
+{     
+    "precio" : 70,
+    "cantidad" : 5
+}
+### List orden
+
+GET  http://localhost:3030/api/orden
+
+### Get orden
+
+GET  http://localhost:3030/api/orden/3
+
+### Delete orden
+
+DELETE   http://localhost:3030/api/orden/4
+
+### Update orden
+
+PUT   http://localhost:3030/api/orden/4
+Content-Type: application/json
+
+{
+     
+    "precio" : 44,
+    "cantidad" : 2
+}
+

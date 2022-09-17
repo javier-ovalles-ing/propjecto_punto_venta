@@ -1,0 +1,29 @@
+### Create rol
+
+POST  http://localhost:3030/api/rol
+Content-Type: application/json
+
+{     
+    "descripcion":"soy la descripcion de un producto"
+}
+### List rol
+
+GET  http://localhost:3030/api/rol
+
+### Get rol
+
+GET  http://localhost:3030/api/rol/3
+
+### Delete rol
+
+DELETE   http://localhost:3030/api/rol/4
+
+### Update rol
+
+PUT   http://localhost:3030/api/rol/2
+Content-Type: application/json
+
+{     
+    "descripcion":"soy la actualizacion de la descripcion de un producto"
+}
+

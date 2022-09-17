@@ -1,0 +1,28 @@
+### Create factura
+
+POST  http://localhost:3030/api/factura
+Content-Type: application/json
+
+{     
+    "monto" : 7000    
+}
+### List factura
+
+GET  http://localhost:3030/api/factura
+
+### Get factura
+
+GET  http://localhost:3030/api/factura/3
+
+### Delete factura
+
+DELETE   http://localhost:3030/api/factura/4
+
+### Update factura
+
+PUT   http://localhost:3030/api/factura/3
+Content-Type: application/json
+
+{     
+    "monto" : 4000    
+}
