@@ -1,8 +1,11 @@
 import {
     Entity,
     PrimaryGeneratedColumn,
-    Column }
+    Column, 
+    JoinColumn,
+    OneToMany}
     from 'typeorm';
+import OrdenEntity from '../orden/orden.entity';
 
     @Entity('Usuario')
     class UsuarioEntity {
@@ -30,6 +33,10 @@ import {
 
         @Column({name: 'foto', type:"text", })
         foto:string;
+
+        @OneToMany(type=>OrdenEntity,(orden)=>orden.id)
+        @JoinColumn({name:"idOrden"})
+        idOrden: OrdenEntity[];
     }
 
     export default UsuarioEntity;

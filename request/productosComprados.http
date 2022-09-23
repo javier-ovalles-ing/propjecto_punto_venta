@@ -1,0 +1,29 @@
+### Create ProductosComprados
+
+POST  http://localhost:3030/api/ProductosComprados
+Content-Type: application/json
+
+{     
+    
+}
+### List ProductosComprados
+
+GET  http://localhost:3030/api/ProductosComprados
+
+### Get ProductosComprados
+
+GET  http://localhost:3030/api/ProductosComprados/3
+
+### Delete ProductosComprados
+
+DELETE   http://localhost:3030/api/ProductosComprados/4
+
+### Update ProductosComprados
+
+PUT   http://localhost:3030/api/ProductosComprados/2
+Content-Type: application/json
+
+{     
+    "descripcion":"soy la actualizacion de la descripcion de un producto"
+}
+

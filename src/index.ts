@@ -1,11 +1,12 @@
 import "reflect-metadata"
-import express from  "express";
+import express, { application } from  "express";
 import router from "./services/categoria/categoria.router";
 import routerOrden from "./services/orden/orden.router";
 import RouterFactura from "./services/factura/factura.router"
 import Routerproducto from "./services/producto/producto.router"
 import RouterRol from "./services/rol/rol.router";
 import UsuarioRouter from "./services/usuario/usuario.router"
+import productoscomporadosRouter from "./services/productosComprados/ProductosComprados.router"
 import database from "../config/database";
 
 const app = express();
@@ -20,7 +21,9 @@ database.initialize()
  app.use("/api",routerOrden);
  app.use("/api",RouterFactura);
  app.use("/api",RouterRol);
+ app.use("/api",Routerproducto);
  app.use("/api",UsuarioRouter);
+ app.use("/api",productoscomporadosRouter)
 
  const PUERTO = 3030;
  

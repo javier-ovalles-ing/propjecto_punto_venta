@@ -1,0 +1,6 @@
+categoria - producto
+producto - orden
+usuario - orden
+factura - orden
+productosComprados - orden
+ProductosComprados - producto
