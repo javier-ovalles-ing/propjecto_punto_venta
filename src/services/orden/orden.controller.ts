@@ -10,6 +10,8 @@ import database from "../../../config/database";
 import {
     NotFound
 } from "http-errors";
+import FacturaEntity from "../factura/factura.entity";
+import { orden1663179815317 } from "../../../migaciones guardadas/1663179815317-orden";
 
 
 export default class OrdenController {
@@ -33,10 +35,16 @@ export default class OrdenController {
 
         try {
             const body = req.body;
-            console.log("req.body:", req.body);
+            console.log("req.body:",body);
             const repository = database.getRepository(OrdenEntity);
-            const Orden = repository.create(body);
-            console.log(Orden);
+            const Orden = repository.create(body as Object);
+            const factura = new FacturaEntity()
+            factura.monto = 45;
+            factura.fecha = new Date(); 
+             Orden.idFactura = factura as FacturaEntity; 
+
+            console.log("objeto factura: ", factura)
+            
             await repository.save(Orden);
             res.status(200).json(Orden);
 

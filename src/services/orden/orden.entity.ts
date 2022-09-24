@@ -32,7 +32,9 @@ import UsuarioEntity from '../usuario/usuario.entity';
         @JoinColumn({name:"idUsuario"})
         idUsuario:UsuarioEntity;
 
-        @ManyToOne(type=>FacturaEntity,(factura)=>factura.id)
+        @ManyToOne(type=>FacturaEntity,(factura)=>factura.id,{
+            cascade: true
+         })
         @JoinColumn({name:"idFactura"})
         idFactura:FacturaEntity;
 
